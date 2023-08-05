@@ -1,0 +1,52 @@
+{
+  "info": {
+    "id": "326440",
+    "name": "Punjabi Angithi",
+    "cloudinaryImageId": "g2pklvjnapzfoc4ackou",
+    "locality": "Paschim Vihar",
+    "areaName": "Paschim Vihar",
+    "costForTwo": "₹400 for two",
+    "cuisines": ["North Indian", "Chinese", "Punjabi", "Kebabs", "Tandoor"],
+    "avgRating": 4.1,
+    "feeDetails": {
+      "restaurantId": "326440",
+      "fees": [
+        {
+          "name": "BASE_DISTANCE",
+          "fee": 5200
+        },
+        {
+          "name": "BASE_TIME"
+        },
+        {
+          "name": "ANCILLARY_SURGE_FEE"
+        }
+      ],
+      "totalFee": 5200
+    },
+    "parentId": "4464",
+    "avgRatingString": "4.1",
+    "totalRatingsString": "10K+",
+    "sla": {
+      "deliveryTime": 32,
+      "lastMileTravel": 5.6,
+      "serviceability": "SERVICEABLE",
+      "slaString": "32 mins",
+      "lastMileTravelString": "5.6 km",
+      "iconType": "ICON_TYPE_EMPTY"
+    },
+    "availability": {
+      "nextCloseTime": "2023-08-04 23:00:00",
+      "opened": true
+    },
+    "badges": {
+      "textExtendedBadges": [
+        {
+          "iconId": "guiltfree/GF_Logo_android_3x",
+          "shortDescription": "options available",
+          "fontColor": "#7E808C"
+        }
+      ]
+    }
+  }
+}

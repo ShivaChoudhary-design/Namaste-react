@@ -1,0 +1,27 @@
+import { FOOD_IMG } from "../utils/constants";
+// import User from "./User";
+// import UserClass from "./UserClass";
+const About = () => {
+  return (
+    <>
+      <div className="flex justify-around my-32">
+        <div className="flex flex-col gap-2.5 mt-10">
+          <h1 className="text-5xl font-serif">Welcome to</h1>
+          <h1 className="text-5xl font-serif">The world of</h1>
+          <h1 className="bg-purple-400 p-5  text-5xl rounded-lg font-serif">
+            Your Favourite & Fresh Food
+          </h1>
+          <h3 className="italic text-gray-700 font-serif">
+            "India's most loved Food app{" "}
+            <span className="text-purple-400">Foodie</span>"
+          </h3>
+        </div>
+        <img className="w-96" src={FOOD_IMG}></img>
+      </div>
+
+      {/* <UserClass name={"Shiva Choudhary"} /> */}
+    </>
+  );
+};
+
+export default About;
