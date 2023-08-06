@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <div className="flex flex-col justify-between items-center shadow-lg bg-gray-300 md:flex-row">
-      <div className="logo ml-12">
+      <div className="logo">
         <Link to="/">
           <img className="w-20 " src={LOGO_URL}></img>
         </Link>
