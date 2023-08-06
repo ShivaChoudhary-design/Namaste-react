@@ -2,7 +2,7 @@ import { FORM_IMG } from "../utils/constants";
 
 const Contact = () => {
   return (
-    <div className="flex justify-around mb-4">
+    <div className="flex flex-col justify-around mb-4 md:flex-row">
       <img className="w-96" src={FORM_IMG}></img>
       <div className="flex flex-col gap-5">
         <h1 className="mx-0 my-auto mt-5 text-5xl">Contact Us</h1>
