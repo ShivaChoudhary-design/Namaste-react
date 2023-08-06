@@ -18,7 +18,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center">
-        <ul className="flex p-4 m-4">
+        <ul className="flex p-4">
           <li className="px-4 hover:border border-gray-500 rounded-md font-bold text-gray-700">
             <Link to="/">Home</Link>
           </li>
