@@ -4,7 +4,7 @@ import { FOOD_IMG } from "../utils/constants";
 const About = () => {
   return (
     <>
-      <div className="lex flex-col p-3 md:flex-row justify-around my-32">
+      <div className="flex flex-col p-3 md:flex-row justify-around my-32">
         <div className="flex flex-col gap-2.5 mt-10">
           <h1 className="text-5xl font-serif pl-5">Welcome to</h1>
           <h1 className="text-5xl font-serif pl-5">The world of</h1>
