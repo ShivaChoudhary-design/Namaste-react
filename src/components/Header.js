@@ -11,7 +11,7 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="flex justify-between items-center shadow-lg bg-gray-300">
+    <div className="flex flex-col justify-between items-center shadow-lg bg-gray-300 md:flex-row">
       <div className="logo ml-12">
         <Link to="/">
           <img className="w-20 " src={LOGO_URL}></img>
