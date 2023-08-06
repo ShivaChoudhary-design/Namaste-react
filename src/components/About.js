@@ -4,10 +4,10 @@ import { FOOD_IMG } from "../utils/constants";
 const About = () => {
   return (
     <>
-      <div className="flex justify-around my-32">
+      <div className="lex flex-col p-3 md:flex-row justify-around my-32">
         <div className="flex flex-col gap-2.5 mt-10">
-          <h1 className="text-5xl font-serif">Welcome to</h1>
-          <h1 className="text-5xl font-serif">The world of</h1>
+          <h1 className="text-5xl font-serif pl-5">Welcome to</h1>
+          <h1 className="text-5xl font-serif pl-5">The world of</h1>
           <h1 className="bg-purple-400 p-5  text-5xl rounded-lg font-serif">
             Your Favourite & Fresh Food
           </h1>
@@ -16,7 +16,7 @@ const About = () => {
             <span className="text-purple-400">Foodie</span>"
           </h3>
         </div>
-        <img className="w-96" src={FOOD_IMG}></img>
+        <img className="w-96 mt-2 md:m-0" src={FOOD_IMG}></img>
       </div>
 
       {/* <UserClass name={"Shiva Choudhary"} /> */}
