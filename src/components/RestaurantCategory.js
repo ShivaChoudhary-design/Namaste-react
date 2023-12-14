@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
+import dropdown from "../../public/down-arrow.png";
 
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   const handleClick = () => {
@@ -16,10 +17,12 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
           <span className="text-lg font-semibold">
             {data.title} ({data?.itemCards?.length})
           </span>
-          <span>🡣</span>
+          <span>
+            <img src={dropdown} height={16} width={16} />
+          </span>
         </div>
         {/* Accordian Body */}
-        {showItems && <ItemList items={data.itemCards} />}
+        {showItems && <ItemList items={data.itemCards} isCart={false} />}
       </div>
     </div>
   );
