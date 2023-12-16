@@ -9,6 +9,7 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const [buttonChecker, setButtonChecker] = useState(false);
 
   useEffect(() => {
     fetchData();
@@ -79,17 +80,30 @@ const Body = () => {
         Restaurants with online food delivery in Delhi
       </h2>
       <div className="flex justify-center mt-3">
-        <button
-          className="p-2 rounded-lg cursor-pointer bg-orange-400"
-          onClick={() => {
-            const topRatedRestaurant = listOfRestaurants.filter(
-              (res) => res?.info?.avgRating > 4
-            );
-            setFilteredRestaurant(topRatedRestaurant);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+        {buttonChecker ? (
+          <button
+            className="p-2 rounded-lg cursor-pointer bg-orange-400"
+            onClick={() => {
+              setFilteredRestaurant(listOfRestaurants);
+              setButtonChecker(!buttonChecker);
+            }}
+          >
+            All Restaurants
+          </button>
+        ) : (
+          <button
+            className="p-2 rounded-lg cursor-pointer bg-orange-400"
+            onClick={() => {
+              const topRatedRestaurant = listOfRestaurants.filter(
+                (res) => res?.info?.avgRating > 4
+              );
+              setFilteredRestaurant(topRatedRestaurant);
+              setButtonChecker(!buttonChecker);
+            }}
+          >
+            Top Rated Restaurants
+          </button>
+        )}
       </div>
       <div className="flex flex-wrap justify-center mt-1 mx-2">
         {filteredRestaurant.map((restaurant) => (

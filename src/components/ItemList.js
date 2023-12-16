@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, isCart }) => {
   const CDN_URL =
     "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/";
 
@@ -17,7 +17,7 @@ const ItemList = ({ items }) => {
           key={item?.card?.info?.id}
           className="p-2 m-2  border-gray-200 border-b-2 text-left flex justify-between"
         >
-          <div className="w-9/12">
+          <div className="w-9/12 flex items-center">
             <div className="py-2">
               <span>{item?.card?.info?.name}</span>
               <span>
@@ -29,17 +29,21 @@ const ItemList = ({ items }) => {
             <p className="text-xs">{item?.card?.info?.description}</p>
           </div>
           <div className="w-3/12 p-4 ">
-            <div className="absolute">
-              <button
-                onClick={() => handleAddItem(item)}
-                className="p-2 mx-9 bg-black text-white shadow-lg rounded-md "
-              >
-                Add +
-              </button>
-            </div>
+            {isCart ? null : (
+              <div className="absolute">
+                <button
+                  onClick={() => handleAddItem(item)}
+                  className="p-2 mx-9 bg-black text-white shadow-lg rounded-md "
+                >
+                  Add +
+                </button>
+              </div>
+            )}
             <img
               className="rounded-md "
               src={CDN_URL + item?.card?.info?.imageId}
+              height={isCart ? 50 : 60}
+              width={isCart ? 50 : 100}
             />
           </div>
         </div>
