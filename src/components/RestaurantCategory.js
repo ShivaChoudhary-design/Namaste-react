@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
-import dropdown from "../../public/down-arrow.png";
+import dropdown from "../down-arrow.png";
 
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   const handleClick = () => {
