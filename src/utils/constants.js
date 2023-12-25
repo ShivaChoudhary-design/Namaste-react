@@ -5,10 +5,10 @@ export const LOGO_URL =
   "https://www.transparentpng.com/thumb/food/Ha2HDD-food-cut-out-png.png";
 
 export const Swiggy_API =
-  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.704060&lng=77.102493&page_type=DESKTOP_WEB_LISTING";
+  "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D28.704060%26lng%3D77.102493%26page_type%3DDESKTOP_WEB_LISTING";
 
 export const MENU_API_URL =
-  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.704060&lng=77.102493&&submitAction=ENTER&restaurantId=";
+  "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Fmenu%2Fpl%3Fpage-type%3DREGULAR_MENU%26complete-menu%3Dtrue%26lat%3D28.704060%26lng%3D77.102493%26%26submitAction%3DENTER%26restaurantId="
 
 export const FORM_IMG =
   "https://foodfire-chapter09.netlify.app/Contact-Us.13c5d28a.png";
