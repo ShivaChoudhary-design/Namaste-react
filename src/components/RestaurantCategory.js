@@ -1,6 +1,6 @@
-import { useState } from "react";
 import ItemList from "./ItemList";
-import dropdown from "../down-arrow.png";
+import dropdown from "../images/down-arrow.png";
+import upicon from "../images/triangle.png";
 
 const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   const handleClick = () => {
@@ -8,7 +8,7 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
   };
   return (
     <div>
-      <div className="w-6/12 mx-auto my-4 bg-gray-100 shadow-lg p-4 ">
+      <div className="w-9/12 md:w-6/12 mx-auto my-4 bg-gray-100 shadow-lg p-4 ">
         <div
           className="flex justify-between cursor-pointer"
           onClick={handleClick}
@@ -18,7 +18,11 @@ const RestaurantCategory = ({ data, showItems, setShowIndex }) => {
             {data.title} ({data?.itemCards?.length})
           </span>
           <span>
-            <img src={dropdown} height={16} width={16} />
+            {showItems ? (
+              <img src={upicon} height={10} width={14} />
+            ) : (
+              <img src={dropdown} height={16} width={16} />
+            )}
           </span>
         </div>
         {/* Accordian Body */}

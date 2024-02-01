@@ -17,25 +17,29 @@ const ItemList = ({ items, isCart }) => {
           key={item?.card?.info?.id}
           className="p-2 m-2  border-gray-200 border-b-2 text-left flex justify-between"
         >
-          <div className="w-9/12 flex items-center">
+          <div className="w-9/12 ">
             <div className="py-2">
-              <span>{item?.card?.info?.name}</span>
-              <span>
-                - ₹{" "}
+              <span className="text-sm md:text-base font-medium">
+                {item?.card?.info?.name}
+              </span>
+              <div className="font-normal text-xs md:text-sm">
+                ₹{" "}
                 {item?.card?.info?.price / 100 ||
                   item?.card?.info.defaultPrice / 100}
-              </span>
+              </div>
             </div>
-            <p className="text-xs">{item?.card?.info?.description}</p>
+            <p className="text-xs md:text-sm truncate ">
+              {item?.card?.info?.description}
+            </p>
           </div>
           <div className="w-3/12 p-4 ">
             {isCart ? null : (
               <div className="absolute">
                 <button
                   onClick={() => handleAddItem(item)}
-                  className="p-2 mx-9 bg-black text-white shadow-lg rounded-md "
+                  className="p-2  bg-white text-green-600 shadow-lg rounded-md "
                 >
-                  Add +
+                  Add
                 </button>
               </div>
             )}

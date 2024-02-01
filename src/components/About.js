@@ -1,4 +1,4 @@
-import { FOOD_IMG } from "../utils/constants";
+import FOOD_IMG from "../images/food-png-19665.jpg";
 // import User from "./User";
 // import UserClass from "./UserClass";
 const About = () => {

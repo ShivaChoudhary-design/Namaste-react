@@ -1,4 +1,4 @@
-import { FORM_IMG } from "../utils/constants";
+import FORM_IMG from "../images/Contact-Us.13c5d28a.png";
 
 const Contact = () => {
   return (

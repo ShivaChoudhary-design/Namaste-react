@@ -55,7 +55,7 @@ const Body = () => {
     <div className="m-0 p-0">
       <div className="flex justify-center search-ba m-5 h-10">
         <input
-          className="border border-solid border-black p-2.5 rounded-md w-2/5"
+          className="border border-solid border-black p-2.5 rounded-md w-2/5 truncate"
           data-testid="searchInput"
           type="text"
           placeholder="Search a restaurant you want..."
@@ -76,7 +76,7 @@ const Body = () => {
           🔍 Search
         </button>
       </div>
-      <h2 className="text-center text-xl font-semibold ">
+      <h2 className="text-center text-lg md:text-xl font-semibold ">
         Restaurants with online food delivery in Delhi
       </h2>
       <div className="flex justify-center mt-3">
