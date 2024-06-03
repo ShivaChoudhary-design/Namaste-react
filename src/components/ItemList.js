@@ -3,7 +3,7 @@ import { addItem } from "../utils/cartSlice";
 
 const ItemList = ({ items, isCart }) => {
   const CDN_URL =
-    "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/";
+    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/";
 
   const dispatch = useDispatch();
 
@@ -45,7 +45,10 @@ const ItemList = ({ items, isCart }) => {
             )}
             <img
               className="rounded-md "
-              src={CDN_URL + item?.card?.info?.imageId}
+              src={
+                "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
+                item?.card?.info?.imageId
+              }
               height={isCart ? 50 : 60}
               width={isCart ? 50 : 100}
             />
