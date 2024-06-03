@@ -4,6 +4,7 @@ import { Swiggy_API } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import resList from "../components/mocks/res-list.json";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -17,34 +18,48 @@ const Body = () => {
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   const fetchData = async () => {
-    const data = await fetch(
-      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.250967&lng=75.699785"
+    // const data = await fetch(
+    //   "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.250967&lng=75.699785"
+    // );
+    // const json = await data.json();
+
+    setListOfRestaurants(
+      resList.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants ||
+        resList.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+          .restaurants
     );
-    const json = await data.json();
+
+    setFilteredRestaurant(
+      resList.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants ||
+        resList.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+          .restaurants
+    );
 
     //Optional Chaining
-    setListOfRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants ||
-        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants ||
-        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants ||
-        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-    );
-    setFilteredRestaurant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants ||
-        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants ||
-        json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants ||
-        json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants ||
-        json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
-          ?.restaurants
-    );
+    // setListOfRestaurants(
+    //   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+    //     ?.restaurants ||
+    //     json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+    //       ?.restaurants ||
+    //     json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+    //       ?.restaurants ||
+    //     json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+    //       ?.restaurants
+    // );
+    // setFilteredRestaurant(
+    //   json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+    //     ?.restaurants ||
+    //     json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+    //       ?.restaurants ||
+    //     json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
+    //       ?.restaurants ||
+    //     json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+    //       ?.restaurants ||
+    //     json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle
+    //       ?.restaurants
+    // );
   };
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false)
