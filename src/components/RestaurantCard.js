@@ -12,7 +12,10 @@ const RestaurantCard = (props) => {
     >
       <img
         className="rounded-lg w-60 h-[140px]"
-        src={CDN_URL + cloudinaryImageId}
+        src={
+          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_264,h_288,c_fill/" +
+          cloudinaryImageId
+        }
       ></img>
       <h3 className="font-semibold py-2 text-lg">{name}</h3>
       <h4 className="cuisines font-light text-sm">{cuisines.join(", ")}</h4>

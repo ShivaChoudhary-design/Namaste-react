@@ -17,20 +17,27 @@ const Body = () => {
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
   const fetchData = async () => {
-    const data = await fetch(Swiggy_API);
+    const data = await fetch(
+      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.250967&lng=75.699785"
+    );
     const json = await data.json();
+
     //Optional Chaining
     setListOfRestaurants(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants ||
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants ||
         json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants ||
         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants
     );
     setFilteredRestaurant(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants ||
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants ||
         json?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants ||
         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
@@ -106,7 +113,7 @@ const Body = () => {
         )}
       </div>
       <div className="flex flex-wrap justify-center mt-1 mx-2">
-        {filteredRestaurant.map((restaurant) => (
+        {filteredRestaurant?.map((restaurant) => (
           <Link
             key={restaurant.info.id}
             to={"/restaurants/" + restaurant.info.id}
