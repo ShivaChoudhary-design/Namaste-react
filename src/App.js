@@ -12,12 +12,15 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
+import Login from "./components/Login";
 
 const AppLayout = () => {
   return (
     <Provider store={appStore}>
       <div className="app">
-        <Header />
+        <div className="flex justify-center bg-gray-300 shadow-lg">
+          <Header />
+        </div>
         <Outlet />
         <Footer />
       </div>
@@ -49,6 +52,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
       },
     ],
     errorElement: <Error />,
