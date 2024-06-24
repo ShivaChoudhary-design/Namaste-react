@@ -18,7 +18,7 @@ const AppLayout = () => {
   return (
     <Provider store={appStore}>
       <div className="app">
-        <div className="flex justify-center bg-gray-300 shadow-lg">
+        <div className="flex justify-center bg-gray-300 shadow-lg sticky top-0 z-10">
           <Header />
         </div>
         <Outlet />
