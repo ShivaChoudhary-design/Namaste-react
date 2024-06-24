@@ -12,7 +12,9 @@ const Footer = () => {
             Shiva Choudhary
           </a>
         </span>
-        &nbsp;©️ 2023 <span className="text-red-800 font-bold">Foody</span>
+        <div className="hidden sm:inline">
+          &nbsp;©️ 2023 <span className="text-red-800 font-bold">Foody</span>
+        </div>
       </h4>
     </div>
   );
