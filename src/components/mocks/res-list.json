@@ -1118,6 +1118,7 @@
                     "info": {
                       "id": "590350",
                       "name": "KFC",
+                      "promoted": true,
                       "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/6267ecd0-c240-4ef8-8050-527a15356426_590350.JPG",
                       "locality": "Phagwara Locality",
                       "areaName": "Phagwara",
@@ -3069,6 +3070,7 @@
                       "parentId": "547",
                       "avgRatingString": "4.2",
                       "totalRatingsString": "100+",
+                      "promoted": true,
                       "sla": {
                         "deliveryTime": 27,
                         "lastMileTravel": 5.5,
