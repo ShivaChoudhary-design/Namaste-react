@@ -11,7 +11,7 @@ const Cart = () => {
   return (
     <div className="text-center m-4 p-4">
       <h1 className="text-2xl font-bold">Cart</h1>
-      <div className="w-6/12 m-auto">
+      <div className="md:w-6/12 m-auto">
         <button
           onClick={handleClearCart}
           className="m-2 p-2 bg-black text-white rounded-md"
